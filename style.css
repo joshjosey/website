@@ -1,0 +1,340 @@
+/*Define the variables*/
+:root {
+
+	--primary-font: Arial, Helvetica, sans-serif;
+	--secondary-font:  "Roboto", sans-serif;
+	--primary-color: #F9F6EF;
+	--secondary-color: #8aa9e9;
+	--tertiary-color: #2f4f4f;
+	--background-color: #1a1a1a;
+	--shadow-color: #000;
+	--box-shadow: 0px 2px 15px 2px var(--shadow-color)	
+}
+
+/*Clear the css*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*Define the html behavoir*/
+html {
+	scroll-behavior:smooth;	
+	cursor: default;
+	height: 100%;
+}
+
+/*Define the style for the body*/
+body {
+	font-family: var(--secondary-font);
+	background-color: #8ae9b3;
+	background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+/*----------------------------- Define the style for the HEADER -----------------------------*/
+.head {
+	padding-top: 30px; 
+	padding-bottom: 30px;
+	margin: 0 auto;
+	width: 93%;
+}
+
+.head-wrapper{
+	  max-width: 1920px; /* Set a maximum width */
+	  margin: 0 auto; /* Center the content */
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+}
+
+.head-wrapper h1{
+	margin: 0; /* Remove default margin */
+	font-size: 55px;
+	
+}
+
+.head-wrapper h2{
+	margin: 0; /* Remove default margin */
+	font-size: 35px;
+	color: var(--primary-color);
+}
+
+
+nav ul {
+	list-style: none; /* Remove default list style */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	font-size: 25px;	
+}
+
+nav ul li {
+  display: inline-block; /* Display navigation links horizontally */
+  margin-right: 20px; /* Add spacing between navigation links */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from last navigation link */
+}
+
+nav ul li a {
+color: var(--primary-color); /* Set text color to white */
+  text-decoration: none; /* Remove default underline */
+}
+
+
+/*----------------------------- define the style for the page CONTENT -----------------------------*/
+.content-container {
+	background-color: var(--primary-color);
+	width: 93%;
+	margin: 0 auto 3% auto;
+	padding: 20px;
+	border-radius: 10px;
+	flex: 1;
+}
+
+.content-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+
+.content-pic{
+	width: 500px;
+	height: 300px;
+	justify-content: center;
+	text-align: center;
+}
+	
+.content-pic{
+	background-color: #8ae9b3;
+	background-image: linear-gradient(315deg, #B4DDD2 0%, #c8d6e5 74%);
+	border-radius: 10px;
+	padding: 10px 0px;	
+}
+
+.content-pic img {
+	width: auto;
+	height: 100%;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+.content-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	flex: 1;
+	max-height: 300px;
+	overflow: auto;
+	padding-left: 20px;
+	margin: 0 auto;
+}
+
+.content-info h2 {
+	color: var(--background-color);
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.content-info h3 {
+	color: var(--background-color);
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.content-info h4 {
+	color: var(--background-color);
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.content-info p {
+	color: var(--tertiary-color);
+	font-size: 20px;
+	flex: 1;
+}
+
+/*Skills*/
+.skill-wrapper {
+	padding: 30px;
+	margin: 0 auto;
+}
+
+.skill-cell{
+   	display: inline-block;
+	margin: 10px 30px;
+	text-align: center;
+}
+.skill-cell img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	margin-bottom: 5px;
+
+}	
+
+.skill-cell p{
+	display: block;
+	text-align: center;
+	font-family: var(--secondary-font);
+	font-size: 30px;
+}
+
+/*Resume*/
+
+.resume-wrapper{
+	height: fit-content;
+}
+.info-wrapper{
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	flex: 1;
+	overflow: auto;
+	padding-left: 20px;
+	border-left: 1px solid var(--tertiary-color);
+	left: 10px;
+}
+.resume-section {
+	width: 500px;
+	justify-content: center;
+	text-align: center;
+	padding: 10px 0px;	
+}
+
+.resume-section h1{
+	font-size: 35px;
+}
+
+.resume-info{
+	height: fit-content;
+	width:100%;
+	padding-bottom: 10px;
+}
+
+
+/*----------------------------- define the style for the FOOTER -----------------------------*/
+.foot{
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.foot-wrapper{
+	  max-width: 1920px; /* Set a maximum width */
+	  margin: 0 auto; /* Center the content */
+}
+
+.foot-links{
+	margin-bottom: 10px;
+}
+
+.foot-links a{
+	color: var(--primary-color);
+	text-decoration: none;
+	margin: 0 20px;
+}
+.foot-links a img{
+	width: 40px;
+	height: 40px;
+}
+
+.foot p{
+	margin: 0;
+}
+
+
+/* Define various kinds of text */
+.gradient-text {
+	background-color: #f3ec78;
+	background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+	animation: gradient-animation 4s infinite;
+}
+
+.flashing-text {
+	--bg-size: 400%;
+	--color-one: red;
+	--color-two: antiquewhite;
+	--color-three: blue;
+	font-size: clamp(3rem, 25vmin, 8rem);
+	background: linear-gradient(90deg,
+								var(--color-one),
+								var(--color-two),
+								var(--color-three),
+								var(--color-one)
+								) 0 0 / var(--bg-size) 100%;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	animation: move-bg 25s infinite linear;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .boujee-text {
+	animation: move-bg 25s linear infinite;
+  }
+  @keyframes move-bg {
+	to {
+	  background-position: var(--bg-size) 0;
+	}
+  }
+}
+
+
+.animated-gradient {
+	background-image: -webkit-linear-gradient(125deg, var(--tertiary-color), var(--background-color), var(--secondary-color));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 8s infinite linear;
+	animation: hue 8s infinite linear;
+
+}
+
+@keyframes hue {
+ from {
+   -webkit-filter: hue-rotate(0deg);
+ }
+ to {
+   -webkit-filter: hue-rotate(-360deg);
+ }
+}
+
+
+
+.animated-body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

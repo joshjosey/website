@@ -185,11 +185,13 @@ color: var(--primary-color); /* Set text color to white */
 
 }	
 
-.skill-cell p{
+.skill-cell{
 	display: block;
+	margin: 0%;
 	text-align: center;
 	font-family: var(--secondary-font);
-	font-size: 30px;
+	font-size: 20px;
+	max-width: 15ch;
 }
 
 /*Resume*/
@@ -338,3 +340,56 @@ color: var(--primary-color); /* Set text color to white */
 		background-position: 0% 50%;
 	}
 }
+
+
+/* Define the style for the front and back of flippable elements */
+.front,.back{
+	position:relative;
+	border-radius: 10px;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.front{
+	/*(background: linear-gradient( pink, green);*/
+	z-index: 2;
+	backface-visibility: hidden;
+}
+
+.back{
+	/*background: linear-gradient( skyblue, purple);*/
+	z-index: 1;
+	transform: rotateY(180deg);
+	visibility: hidden;
+	backface-visibility: hidden;
+	align-items: center;
+	top: 30%;
+}
+
+/*Varible mark the beginning and end of a flippable section*/
+.flip{	
+	perspective: 1000px;
+}
+
+/*Wrapper to hold the front and the back of the element*/
+.flip-wrapper{
+	display: grid;
+	transition: all 1s linear;
+	transform-style: preserve-3d;
+	size: fit-content;
+}
+
+/*While hovering, flip to back*/
+.flip:hover .flip-wrapper{
+	transform: rotateY(180deg);
+}
+
+.flip:hover .back{
+	visibility: visible;	
+}
+
+.flip:not(:hover) .back{
+	visibility: visible;
+}
+
+
